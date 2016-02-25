@@ -45,7 +45,7 @@ def to_json():
 
         all_content_dicts.append(d)
 
-    dump_file = open('dump.txt', 'w')
+    dump_file = open('dump.text', 'w')
 
     # list of dictionaries gets turned into JSON here
     json_string = json.dumps(all_content_dicts)
@@ -57,7 +57,7 @@ def from_json():
     """
     Load all content from dump.txt into Content.existing_content
     """
-    dump_file = open('dump.txt', 'r')
+    dump_file = open('dump.json', 'r')
 
     # read JSON string from dump_file
     json_string = dump_file.read()
