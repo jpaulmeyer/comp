@@ -23,8 +23,12 @@ class Image(Content):
     path = models.ImageField(max_length=500)
 
     def info():
-    	print self.path
+    	print "{} ({}), by {}".format(Content.title,Content.subtitle,Content.contributors)
 
 
 class Contributor(models.Model):
-    pass
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=100)
+    content = []
+    def die(Contributor):
+    	Contributor.delete()
